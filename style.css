@@ -1,0 +1,38 @@
+#napis{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#main_text{
+    display: flex;
+    
+    justify-content: center;
+    font-size: xx-large;
+
+}
+
+#button
+{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+
+#wartosc{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+
+#result{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+}

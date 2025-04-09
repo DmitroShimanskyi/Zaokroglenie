@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaokroglenie</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main_text">
+        <h2>Wprowadź liczbę do zaokrąglenia</h2>
+    </div>
+
+    <section id="napis">
+        <input type="number" id="liczba" step="any" placeholder="Wpisz liczbę">
+    </section>
+
+    <section id="button">
+        <input type="button" value="Obliczenie" onclick="sprawdz()">
+    </section>
+
+    <section id="result">
+        <p id="Results"></p>
+    </section>
+
+<section id="wartosc">
+
+    <script>
+        function sprawdz() {
+            var liczba = document.getElementById("liczba").value;
+
+            
+            if (liczba === "" || isNaN(liczba)) {
+                document.getElementById("Results").innerHTML = "Proszę wprowadzić poprawną liczbę.";
+                return; 
+            }
+
+           
+            liczba = parseFloat(liczba);
+
+            var wysza = Math.ceil(liczba);
+            var nisza = Math.floor(liczba);
+            var blisza = Math.round(liczba);
+
+            
+            document.getElementById("Results").innerHTML = `
+                Zaokrąglenie w górę: ${wysza} <br><br>
+                Zaokrąglenie w dół: ${nisza} <br><br>
+                Zaokrąglenie do najbliższego: ${blisza}
+            `;
+        }
+    </script>
+    </section>
+
+</body>
+
+</html>
